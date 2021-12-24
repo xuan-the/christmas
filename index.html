@@ -1,0 +1,84 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Merry Christmas</title>
+    <link rel="stylesheet" href="canvas.css" />
+    <link rel="stylesheet" href="present.css" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="jquery.js"></script>
+  </head>
+  <body>
+    <script type='text/javascript'>
+      $(function(){
+         $('html').append('<img id="halo" title="Happy Noel" style="cursor:pointer;position:fixed;z-index:99999" height="250" src="https://scontent.subi.vn/cmsmedia/ong-gia-noel-va-tuan-loc-14-6fabd71624643c0213b30072f54a8081.png"/>')
+         setInterval(function(){
+            var $X=Math.ceil(Math.random()*$(window).width())
+            var $Y=Math.ceil(Math.random()*$(window).height())
+            $('img#halo').animate({'left':$X,'top':$Y},5000)
+         },5000)
+         $('img#halo').click(function(){
+             window.open('https://sanvemaybay.com.vn/assets/uploads/2017/10/ong-gia-noel-cuoi-tuan-loc-1.jpg','')
+         })
+      })
+     </script>
+    <div class="parent">
+      <canvas id="canvas"></canvas>
+      <section class="above-fold">
+        <div class="wrap-present">
+          <div class="present-box" id="present">
+            <div class="present">
+              <div class="img-wrap" id="present-image"></div>
+            </div>
+            <div class="side front"></div>
+            <div class="side back"></div>
+            <div class="side left"></div>
+            <div class="side right"></div>
+            <div class="side top">
+              <span class="to">
+                <span class="name" id="nametag"> </span>
+              </span>
+            </div>
+            <div class="side bottom"></div>
+          </div>
+        </div>
+        <p class="info-text">Click to Open</p>
+      </section>
+
+      <div id="card">
+        <h4 class="title-card">💘little coder💘</h4>
+
+        <img
+          src="hot-girl.png"
+          class="honey"
+        />
+
+        <h4 class="content-card">
+         content-card.💘
+        </h4>
+      </div>
+    </div>
+    <audio autoplay loop  id="playAudio">
+      <source src="nhacnen.mp3">
+    </audio>
+    <style type="text/css">
+      .snow-container{position:fixed;width:100%;max-width:100%;z-index:99999;pointer-events:none;overflow:hidden;top:0;height:100%}
+      .snow{display:block;position:absolute;z-index:2;top:0;right:0;bottom:0;left:0;pointer-events:none;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0);-webkit-animation:snow linear infinite;animation:snow linear infinite}
+      .snow.foreground{background-image:url("https://2.bp.blogspot.com/-Wy6UPSscdjQ/WiaUVdMxwvI/AAAAAAAAAUU/VlYKpmYGGGskfkn9gc9yKYx-TNKArubPACLcBGAs/s1600/snow-effect-_---------BacSiWindows-Com.png ");-webkit-animation-duration:15s;animation-duration:10s}
+      .snow.foreground.layered{-webkit-animation-delay:7.5s;animation-delay:7.5s}
+      .snow.middleground{background-image:url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-medium-0b8a5e0732315b68e1f54185be7a1ad9.png);-webkit-animation-duration:20s;animation-duration:15s}
+      .snow.middleground.layered{-webkit-animation-delay:10s;animation-delay:10s}
+      .snow.background{background-image:url(https://2.bp.blogspot.com/-cZWwrfEYtMI/WiaUgSmqv6I/AAAAAAAAAUY/fayIXcjKnvoWtHL-x-2H2oO5-Ks2e6_nQCLcBGAs/s1600/snow-effect_-_--------------BacSiWindows-Com.png);-webkit-animation-duration:25s;animation-duration:20s}
+      .snow.background.layered{-webkit-animation-delay:12.5s;animation-delay:12.5s}
+      @-webkit-keyframes snow{0%{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{-webkit-transform:translate3d(5%,100%,0);transform:translate3d(5%,100%,0)}}
+      @keyframes snow{0%{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{-webkit-transform:translate3d(5%,100%,0);transform:translate3d(5%,100%,0)}}
+      </style>
+      <div class='snow-container'><div class='snow foreground'/><div class='snow foreground layered'/><div class='snow middleground'/><div class='snow middleground layered'/><div class='snow background'/><div class='snow background layered'/></div>
+  </body>
+  <script src="config.js"></script>
+  <script src="canvas.js"></script>
+  <script src="present.js"></script>
+</html>
